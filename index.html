@@ -1,194 +1,740 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Pooja Mangalya | Cloud & DevOps</title>
 
-    
-</head>
+    <meta name="description"
+        content="Pooja Mangalya — Final Year MCA Student building skills in Cloud, DevOps, AWS, automation and infrastructure.">
+
     <link rel="stylesheet" href="style.css">
+</head>
 
 <body>
 
-    <nav>
-        <h2>Pooja Mangalya</h2>
+    <!-- ================= NAVBAR ================= -->
 
-        <div>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
+    <header class="navbar">
 
-    <section class="hero">
+        <div class="nav-container">
 
-        <p>HELLO, I'M</p>
+            <a href="#home" class="logo">
+                <span>&lt;</span>PM<span>/&gt;</span>
+            </a>
 
-        <h1>Pooja Mangalya</h1>
+            <nav id="navMenu">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#journey">Journey</a>
+                <a href="#internship">Internship</a>
+                <a href="#contact">Contact</a>
+            </nav>
 
-        <h2>Cloud & DevOps Enthusiast</h2>
-
-        <p class="hero-description">
-            Final-year MCA student passionate about Cloud Computing,
-            DevOps, automation, infrastructure, and building reliable
-            cloud-based solutions.
-        </p>
-
-        <a href="#projects" class="button">Explore My Work</a>
-
-    </section>
-
-
-    <section id="about">
-
-        <h2>About Me</h2>
-
-        <p class="about">
-            I am a final-year MCA student at St. Joseph's College,
-            interested in Cloud Computing and DevOps. I enjoy learning
-            how applications are deployed, automated, monitored, and
-            managed in cloud environments.
-
-            <br><br>
-
-            My current focus is on AWS, Linux, Docker, CI/CD,
-            Infrastructure as Code, networking, and monitoring.
-            I am continuously building hands-on projects to strengthen
-            my practical DevOps skills.
-        </p>
-
-    </section>
-
-
-    <section id="skills">
-
-        <h2>Skills & Technologies</h2>
-
-        <div class="skills">
-
-            <div class="skill">AWS</div>
-            <div class="skill">Linux</div>
-            <div class="skill">Docker</div>
-            <div class="skill">Docker Compose</div>
-            <div class="skill">Terraform</div>
-            <div class="skill">Jenkins</div>
-            <div class="skill">CI/CD</div>
-            <div class="skill">Networking</div>
-            <div class="skill">TCP/IP</div>
-            <div class="skill">DNS</div>
-            <div class="skill">DHCP</div>
-            <div class="skill">EC2</div>
-            <div class="skill">S3</div>
-            <div class="skill">VPC</div>
-            <div class="skill">IAM</div>
-            <div class="skill">Prometheus</div>
-            <div class="skill">Grafana</div>
+            <button class="menu-btn" id="menuBtn">
+                ☰
+            </button>
 
         </div>
 
-    </section>
+    </header>
 
 
-    <section id="projects">
+    <!-- ================= HERO ================= -->
 
-        <h2>Featured Projects</h2>
+    <main>
+
+        <section id="home" class="hero">
+
+            <div class="hero-content">
+
+                <div class="terminal-label">
+                    <span class="terminal-dot"></span>
+                    cloud@pooja:~$
+                    <span class="typing-text">whoami</span>
+                </div>
+
+                <p class="hero-small">
+                    HELLO, I'M
+                </p>
+
+                <h1>
+                    Pooja <span>Mangalya</span>
+                </h1>
+
+                <h2>
+                    Cloud & DevOps Enthusiast
+                </h2>
+
+                <p class="hero-description">
+                    Final-year MCA student exploring the world of
+                    <strong>cloud infrastructure, automation, CI/CD and monitoring.</strong>
+                    I enjoy turning ideas into reliable and deployable systems.
+                </p>
+
+                <div class="hero-tags">
+                    <span>☁ AWS</span>
+                    <span>🐧 Linux</span>
+                    <span>🐳 Docker</span>
+                    <span>⚙ Terraform</span>
+                    <span>🚀 CI/CD</span>
+                </div>
+
+                <div class="hero-buttons">
+
+                    <a href="#projects" class="btn primary-btn">
+                        Explore My Work →
+                    </a>
+
+                    <a href="#contact" class="btn secondary-btn">
+                        Let's Connect
+                    </a>
+
+                </div>
+
+                <div class="social-links">
+
+                    <!-- Replace these # links later -->
+
+                    <a href="#" target="_blank">
+                        GitHub ↗
+                    </a>
+
+                    <a href="#" target="_blank">
+                        LinkedIn ↗
+                    </a>
+
+                    <a href="#" target="_blank">
+                        Resume ↗
+                    </a>
+
+                </div>
+
+            </div>
 
 
-        <div class="project">
+            <!-- CLOUD VISUAL -->
 
-            <h3>AWS 3-Tier Architecture</h3>
+            <div class="hero-visual">
 
-            <p>
-                Designed and implemented a 3-tier architecture on AWS
-                using VPC, EC2, Load Balancer, and RDS. Configured
-                networking and cloud resources to support a scalable
-                application environment.
+                <div class="cloud-orbit orbit-one"></div>
+                <div class="cloud-orbit orbit-two"></div>
+
+                <div class="cloud-core">
+
+                    <div class="cloud-icon">
+                        ☁
+                    </div>
+
+                    <p>BUILD</p>
+                    <p>AUTOMATE</p>
+                    <p>DEPLOY</p>
+                    <p>MONITOR</p>
+
+                </div>
+
+                <div class="floating-card card-aws">
+                    AWS
+                </div>
+
+                <div class="floating-card card-docker">
+                    Docker
+                </div>
+
+                <div class="floating-card card-terraform">
+                    Terraform
+                </div>
+
+                <div class="floating-card card-linux">
+                    Linux
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ABOUT ================= -->
+
+        <section id="about" class="section">
+
+            <div class="section-heading">
+
+                <p class="section-number">01 / ABOUT</p>
+
+                <h2>
+                    Building my path into <span>Cloud & DevOps</span>
+                </h2>
+
+            </div>
+
+            <div class="about-grid">
+
+                <div class="about-text">
+
+                    <p>
+                        I'm a final-year <strong>MCA student at St. Joseph's College</strong>
+                        with a growing interest in Cloud Computing and DevOps.
+                    </p>
+
+                    <p>
+                        My learning journey has taken me through Linux, networking,
+                        AWS, containers, Infrastructure as Code, CI/CD and monitoring.
+                    </p>
+
+                    <p>
+                        I'm currently focused on building practical projects that
+                        help me understand how applications are
+                        <strong>built, deployed, automated and monitored.</strong>
+                    </p>
+
+                </div>
+
+                <div class="about-terminal">
+
+                    <div class="terminal-top">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <div class="terminal-body">
+
+                        <p><span class="green">pooja@cloud</span>:~$ cat profile.txt</p>
+
+                        <p>
+                            Name: Pooja Mangalya<br>
+                            Degree: MCA<br>
+                            Focus: Cloud & DevOps<br>
+                            Environment: AWS ☁<br>
+                            Status: <span class="green">Learning + Building</span>
+                        </p>
+
+                        <p>
+                            <span class="green">pooja@cloud</span>:~$
+                            <span class="cursor">_</span>
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SKILLS ================= -->
+
+        <section id="skills" class="section skills-section">
+
+            <div class="section-heading">
+
+                <p class="section-number">02 / SKILLS</p>
+
+                <h2>
+                    My <span>Cloud Toolkit</span>
+                </h2>
+
+                <p>
+                    Technologies and concepts I've been learning through
+                    hands-on practice and projects.
+                </p>
+
+            </div>
+
+
+            <div class="skills-grid">
+
+                <div class="skill-card">
+                    <div class="skill-icon">☁</div>
+                    <h3>Cloud</h3>
+                    <p>AWS · EC2 · S3 · VPC · IAM</p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">🐧</div>
+                    <h3>Linux</h3>
+                    <p>CLI · Processes · Permissions · Networking</p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">🐳</div>
+                    <h3>Containers</h3>
+                    <p>Docker · Docker Compose</p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">⚙</div>
+                    <h3>Infrastructure</h3>
+                    <p>Terraform · Infrastructure as Code</p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">🚀</div>
+                    <h3>CI/CD</h3>
+                    <p>Jenkins · Git · Automation</p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">📊</div>
+                    <h3>Monitoring</h3>
+                    <p>Prometheus · Grafana</p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">🌐</div>
+                    <h3>Networking</h3>
+                    <p>TCP/IP · DNS · DHCP</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PROJECTS ================= -->
+
+        <section id="projects" class="section">
+
+            <div class="section-heading">
+
+                <p class="section-number">03 / PROJECTS</p>
+
+                <h2>
+                    Things I've <span>Built</span>
+                </h2>
+
+                <p>
+                    Practical projects where I applied Cloud and DevOps concepts.
+                </p>
+
+            </div>
+
+
+            <div class="projects-grid">
+
+
+                <!-- PROJECT 1 -->
+
+                <article class="project-card">
+
+                    <div class="project-number">01</div>
+
+                    <div class="project-top">
+                        <span class="project-type">AWS / CLOUD</span>
+                        <span class="project-status">● COMPLETED</span>
+                    </div>
+
+                    <h3>AWS 3-Tier Architecture</h3>
+
+                    <p>
+                        Designed a scalable 3-tier architecture using AWS networking,
+                        compute and database services.
+                    </p>
+
+                    <div class="tech-tags">
+                        <span>AWS</span>
+                        <span>VPC</span>
+                        <span>EC2</span>
+                        <span>Load Balancer</span>
+                        <span>RDS</span>
+                    </div>
+
+                    <a href="#" class="project-link">
+                        View Case Study →
+                    </a>
+
+                </article>
+
+
+                <!-- PROJECT 2 -->
+
+                <article class="project-card">
+
+                    <div class="project-number">02</div>
+
+                    <div class="project-top">
+                        <span class="project-type">CI/CD</span>
+                        <span class="project-status">● COMPLETED</span>
+                    </div>
+
+                    <h3>Jenkins CI/CD Pipeline</h3>
+
+                    <p>
+                        Built an automated CI/CD workflow using Jenkins to streamline
+                        application build and deployment processes.
+                    </p>
+
+                    <div class="tech-tags">
+                        <span>Jenkins</span>
+                        <span>Git</span>
+                        <span>CI/CD</span>
+                        <span>Linux</span>
+                    </div>
+
+                    <a href="#" class="project-link">
+                        View Case Study →
+                    </a>
+
+                </article>
+
+
+                <!-- PROJECT 3 -->
+
+                <article class="project-card">
+
+                    <div class="project-number">03</div>
+
+                    <div class="project-top">
+                        <span class="project-type">CONTAINERS</span>
+                        <span class="project-status">● COMPLETED</span>
+                    </div>
+
+                    <h3>Containerized Application</h3>
+
+                    <p>
+                        Containerized an application and deployed multiple services
+                        using Docker Compose with MongoDB.
+                    </p>
+
+                    <div class="tech-tags">
+                        <span>Docker</span>
+                        <span>Compose</span>
+                        <span>MongoDB</span>
+                    </div>
+
+                    <a href="#" class="project-link">
+                        View Case Study →
+                    </a>
+
+                </article>
+
+
+                <!-- PROJECT 4 -->
+
+                <article class="project-card">
+
+                    <div class="project-number">04</div>
+
+                    <div class="project-top">
+                        <span class="project-type">IaC</span>
+                        <span class="project-status">● COMPLETED</span>
+                    </div>
+
+                    <h3>Terraform Infrastructure</h3>
+
+                    <p>
+                        Automated infrastructure provisioning using Terraform
+                        following Infrastructure as Code principles.
+                    </p>
+
+                    <div class="tech-tags">
+                        <span>Terraform</span>
+                        <span>AWS</span>
+                        <span>IaC</span>
+                    </div>
+
+                    <a href="#" class="project-link">
+                        View Case Study →
+                    </a>
+
+                </article>
+
+
+                <!-- PROJECT 5 -->
+
+                <article class="project-card">
+
+                    <div class="project-number">05</div>
+
+                    <div class="project-top">
+                        <span class="project-type">MONITORING</span>
+                        <span class="project-status">● COMPLETED</span>
+                    </div>
+
+                    <h3>Autoscaling & Monitoring</h3>
+
+                    <p>
+                        Worked with EC2 autoscaling concepts and implemented
+                        monitoring and visualization using Prometheus and Grafana.
+                    </p>
+
+                    <div class="tech-tags">
+                        <span>AWS</span>
+                        <span>Prometheus</span>
+                        <span>Grafana</span>
+                        <span>EC2</span>
+                    </div>
+
+                    <a href="#" class="project-link">
+                        View Case Study →
+                    </a>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= DEVOPS JOURNEY ================= -->
+
+        <section id="journey" class="section journey-section">
+
+            <div class="section-heading">
+
+                <p class="section-number">04 / JOURNEY</p>
+
+                <h2>
+                    My <span>DevOps Journey</span>
+                </h2>
+
+                <p>
+                    One step at a time — from fundamentals to cloud automation.
+                </p>
+
+            </div>
+
+
+            <div class="journey">
+
+                <div class="journey-line"></div>
+
+                <div class="journey-item">
+                    <div class="journey-dot">01</div>
+                    <div>
+                        <h3>Linux</h3>
+                        <p>Command line, permissions, processes and system basics.</p>
+                    </div>
+                </div>
+
+                <div class="journey-item">
+                    <div class="journey-dot">02</div>
+                    <div>
+                        <h3>Networking</h3>
+                        <p>TCP/IP, DNS, DHCP, ports and networking fundamentals.</p>
+                    </div>
+                </div>
+
+                <div class="journey-item">
+                    <div class="journey-dot">03</div>
+                    <div>
+                        <h3>AWS</h3>
+                        <p>EC2, S3, VPC, IAM and cloud architecture.</p>
+                    </div>
+                </div>
+
+                <div class="journey-item">
+                    <div class="journey-dot">04</div>
+                    <div>
+                        <h3>Containers</h3>
+                        <p>Docker and Docker Compose for application deployment.</p>
+                    </div>
+                </div>
+
+                <div class="journey-item">
+                    <div class="journey-dot">05</div>
+                    <div>
+                        <h3>Automation</h3>
+                        <p>Jenkins, CI/CD and Terraform Infrastructure as Code.</p>
+                    </div>
+                </div>
+
+                <div class="journey-item">
+                    <div class="journey-dot">06</div>
+                    <div>
+                        <h3>Monitoring</h3>
+                        <p>Prometheus and Grafana for observability.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= INTERNSHIP ================= -->
+
+        <section id="internship" class="section">
+
+            <div class="section-heading">
+
+                <p class="section-number">05 / EXPERIENCE</p>
+
+                <h2>
+                    Internship <span>Experience</span>
+                </h2>
+
+            </div>
+
+
+            <div class="internship-card">
+
+                <div class="internship-header">
+
+                    <div>
+                        <p class="internship-label">DEVOPS INTERN</p>
+
+                        <h3>Nayra Infolabs (OPC) Pvt Ltd</h3>
+
+                        <p>
+                            May 2026 — June 2026
+                        </p>
+                    </div>
+
+                    <div class="internship-badge">
+                        DEVOPS
+                    </div>
+
+                </div>
+
+
+                <div class="internship-content">
+
+                    <p>
+                        Worked on practical DevOps tasks involving web application
+                        deployment, Docker, AWS, CI/CD and infrastructure automation.
+                    </p>
+
+                    <div class="internship-tech">
+
+                        <span>Docker</span>
+                        <span>AWS</span>
+                        <span>CI/CD</span>
+                        <span>Terraform</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PORTFOLIO ARCHITECTURE ================= -->
+
+        <section class="section architecture-section">
+
+            <div class="section-heading">
+
+                <p class="section-number">06 / THIS WEBSITE</p>
+
+                <h2>
+                    Deployed like a <span>DevOps Project</span>
+                </h2>
+
+                <p>
+                    This portfolio isn't just a website. It is also a small
+                    demonstration of my cloud and deployment journey.
+                </p>
+
+            </div>
+
+
+            <div class="architecture">
+
+                <div class="architecture-node">
+                    <strong>GitHub</strong>
+                    <small>Source Code</small>
+                </div>
+
+                <div class="architecture-arrow">→</div>
+
+                <div class="architecture-node">
+                    <strong>GitHub Actions</strong>
+                    <small>CI/CD</small>
+                </div>
+
+                <div class="architecture-arrow">→</div>
+
+                <div class="architecture-node">
+                    <strong>S3</strong>
+                    <small>Static Hosting</small>
+                </div>
+
+                <div class="architecture-arrow">→</div>
+
+                <div class="architecture-node">
+                    <strong>CloudFront</strong>
+                    <small>CDN</small>
+                </div>
+
+                <div class="architecture-arrow">→</div>
+
+                <div class="architecture-node">
+                    <strong>Route 53</strong>
+                    <small>DNS</small>
+                </div>
+
+            </div>
+
+            <p class="architecture-note">
+                Git push → automated deployment → globally delivered portfolio
             </p>
 
-        </div>
+        </section>
 
 
-        <div class="project">
+        <!-- ================= CONTACT ================= -->
 
-            <h3>CI/CD Pipeline Automation with Jenkins</h3>
+        <section id="contact" class="section contact-section">
 
-            <p>
-                Designed and implemented a Jenkins-based CI/CD pipeline
-                to automate application build and deployment workflows,
-                applying continuous integration and continuous delivery
-                practices.
-            </p>
+            <div class="contact-box">
 
-        </div>
+                <p class="section-number">07 / CONTACT</p>
 
+                <h2>
+                    Let's build something <span>reliable.</span>
+                </h2>
 
-        <div class="project">
+                <p>
+                    I'm currently exploring internship and entry-level opportunities
+                    in Cloud and DevOps.
+                </p>
 
-            <h3>Containerized Application with Docker</h3>
+                <a href="mailto:YOUR_EMAIL@gmail.com" class="btn primary-btn">
+                    Get In Touch →
+                </a>
 
-            <p>
-                Containerized an application using Docker and deployed
-                multiple services using Docker Compose with MongoDB,
-                simplifying application deployment and environment
-                management.
-            </p>
+                <div class="contact-links">
 
-        </div>
+                    <a href="#" target="_blank">GitHub</a>
+                    <a href="#" target="_blank">LinkedIn</a>
+                    <a href="#" target="_blank">Resume</a>
 
+                </div>
 
-        <div class="project">
+            </div>
 
-            <h3>Infrastructure Provisioning with Terraform</h3>
+        </section>
 
-            <p>
-                Automated infrastructure provisioning and management
-                using Terraform while following Infrastructure as Code
-                practices.
-            </p>
-
-        </div>
+    </main>
 
 
-        <div class="project">
-
-            <h3>Monitoring with Prometheus & Grafana</h3>
-
-            <p>
-                Configured monitoring and visualization using Prometheus
-                and Grafana to observe infrastructure and application
-                metrics.
-            </p>
-
-        </div>
-
-
-    </section>
-
-
-    <section id="contact">
-
-        <h2>Let's Connect</h2>
-
-        <p class="about">
-            Interested in Cloud and DevOps opportunities, internships,
-            and learning experiences.
-        </p>
-
-        <a class="button" href="mailto:your-email@example.com">
-            Contact Me
-        </a>
-
-    </section>
-
+    <!-- ================= FOOTER ================= -->
 
     <footer>
 
-        <p>© 2026 Pooja Mangalya | Cloud & DevOps Portfolio</p>
+        <p>
+            &lt;/&gt; Built by Pooja Mangalya
+        </p>
+
+        <p>
+            Cloud • DevOps • Automation
+        </p>
 
     </footer>
-<script src="script.js"></script>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
 </body>
+
 </html>
