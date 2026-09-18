@@ -188,6 +188,29 @@
             font-size: 0.95rem;
         }
 
+        /* Troubleshooting */
+
+        .troubleshooting-list {
+            display: grid;
+            gap: 15px;
+        }
+
+        .troubleshooting-item {
+            padding: 20px 22px;
+            border-left: 3px solid #00d9ff;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.025);
+        }
+
+        .troubleshooting-item strong {
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .troubleshooting-item p {
+            margin: 0;
+        }
+
         .case-footer {
             margin-top: 80px;
             padding-top: 30px;
@@ -269,8 +292,11 @@
                 <span>AWS</span>
                 <span>VPC</span>
                 <span>EC2</span>
-                <span>Load Balancer</span>
+                <span>ALB</span>
+                <span>Target Group</span>
+                <span>Auto Scaling</span>
                 <span>RDS</span>
+                <span>NAT Gateway</span>
                 <span>Networking</span>
 
             </div>
@@ -309,7 +335,7 @@
                 Architecture
             </h2>
 
-            <!-- PLACEHOLDER FOR YOUR FUTURE DIAGRAM -->
+            <!-- PLACEHOLDER FOR FUTURE DIAGRAM -->
 
             <div class="architecture-placeholder">
 
@@ -324,9 +350,9 @@
                     </h3>
 
                     <p>
-                        I will add the architecture diagram and screenshots
-                        after rebuilding this project as part of my AWS
-                        knowledge refresh.
+                        The architecture diagram and implementation screenshots
+                        will be added after rebuilding the project and validating
+                        the AWS configuration.
                     </p>
 
                 </div>
@@ -348,6 +374,13 @@
                 <div class="architecture-box">
                     <strong>ALB</strong>
                     <small>Load Balancer</small>
+                </div>
+
+                <div class="architecture-arrow">→</div>
+
+                <div class="architecture-box">
+                    <strong>Target Group</strong>
+                    <small>Registered Targets</small>
                 </div>
 
                 <div class="architecture-arrow">→</div>
@@ -385,7 +418,7 @@
 
                     <p>
                         Created a dedicated AWS VPC to provide an isolated
-                        network environment for the application.
+                        network environment for the application architecture.
                     </p>
 
                 </div>
@@ -393,11 +426,25 @@
 
                 <div class="info-card">
 
-                    <h3>⚖️ Load Balancer</h3>
+                    <h3>⚖️ Application Load Balancer</h3>
 
                     <p>
-                        Used a load balancer to distribute incoming
-                        application traffic across available instances.
+                        Used an Application Load Balancer to receive incoming
+                        application traffic and distribute requests to
+                        registered targets through a Target Group.
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <h3>🎯 Target Group</h3>
+
+                    <p>
+                        Used a Target Group to maintain the set of registered
+                        application targets and perform health checks before
+                        routing traffic to healthy targets.
                     </p>
 
                 </div>
@@ -408,8 +455,49 @@
                     <h3>💻 EC2</h3>
 
                     <p>
-                        Used EC2 instances to host the application layer
-                        of the architecture.
+                        Used EC2 instances to host the application layer.
+                        Application instances are designed to remain private
+                        and receive traffic through the load balancer.
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <h3>📈 Auto Scaling Group</h3>
+
+                    <p>
+                        Used an Auto Scaling Group to manage EC2 capacity
+                        according to defined scaling policies and maintain
+                        the desired number of instances.
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <h3>📋 Launch Template</h3>
+
+                    <p>
+                        Used a Launch Template to define the configuration
+                        required when new EC2 instances are launched,
+                        including AMI, instance configuration and user data.
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <h3>🚪 NAT Gateway</h3>
+
+                    <p>
+                        Designed private application resources to use a NAT
+                        Gateway for required outbound internet connectivity
+                        without assigning public IP addresses to the EC2
+                        instances.
                     </p>
 
                 </div>
@@ -420,8 +508,10 @@
                     <h3>🗄️ RDS</h3>
 
                     <p>
-                        Used Amazon RDS as the database layer, keeping
-                        database resources separate from the application layer.
+                        Used Amazon RDS as the database layer and designed
+                        database access to be restricted to the application
+                        layer rather than exposing the database directly
+                        to the internet.
                     </p>
 
                 </div>
@@ -442,18 +532,34 @@
             <ul>
 
                 <li>
-                    Designed separate network layers for different
-                    application components.
+                    Designed public and private subnet layers based on
+                    resource accessibility requirements.
                 </li>
 
                 <li>
-                    Configured routing and connectivity between required
-                    resources.
+                    Used an Internet Gateway to provide internet connectivity
+                    for resources requiring public access.
                 </li>
 
                 <li>
-                    Used security controls to restrict unnecessary access
-                    between layers.
+                    Designed private application resources to use a NAT
+                    Gateway for required outbound internet connectivity.
+                </li>
+
+                <li>
+                    Restricted EC2 inbound application traffic to the
+                    Application Load Balancer security group.
+                </li>
+
+                <li>
+                    Restricted database inbound traffic to the
+                    application EC2 security group.
+                </li>
+
+                <li>
+                    Used Security Group references instead of relying on
+                    individual resource IP addresses for communication
+                    between application layers.
                 </li>
 
                 <li>
@@ -471,15 +577,126 @@
         <section class="case-section">
 
             <h2>
-                Scalability
+                Scalability & <span>Availability</span>
             </h2>
 
             <p>
-                A three-tier architecture provides a foundation for scaling
-                individual layers independently. The application layer can
-                be expanded without directly exposing or modifying the
-                database layer.
+                The application layer can be managed through an Auto Scaling
+                Group. Scaling policies can increase or decrease the desired
+                capacity based on defined conditions such as CPU utilization.
             </p>
+
+            <p>
+                A multi-Availability-Zone design can improve availability by
+                distributing resources across separate Availability Zones.
+                If one Availability Zone experiences an infrastructure
+                failure, resources in another Availability Zone can continue
+                serving the application.
+            </p>
+
+        </section>
+
+
+        <!-- TROUBLESHOOTING -->
+
+        <section class="case-section">
+
+            <h2>
+                Troubleshooting <span>Approach</span>
+            </h2>
+
+            <p>
+                During AWS troubleshooting practice, I learned to approach
+                connectivity problems layer by layer instead of checking
+                components randomly.
+            </p>
+
+            <div class="troubleshooting-list">
+
+                <div class="troubleshooting-item">
+
+                    <strong>01. ALB Listener</strong>
+
+                    <p>
+                        Verify that the listener is configured correctly
+                        for the expected protocol and port.
+                    </p>
+
+                </div>
+
+
+                <div class="troubleshooting-item">
+
+                    <strong>02. Target Group</strong>
+
+                    <p>
+                        Verify that the EC2 instance is registered with
+                        the correct Target Group.
+                    </p>
+
+                </div>
+
+
+                <div class="troubleshooting-item">
+
+                    <strong>03. Target Health</strong>
+
+                    <p>
+                        Check whether the target is healthy and review the
+                        configured health-check path, port and protocol.
+                    </p>
+
+                </div>
+
+
+                <div class="troubleshooting-item">
+
+                    <strong>04. Security Groups</strong>
+
+                    <p>
+                        Verify that the EC2 Security Group allows the
+                        required application traffic from the ALB Security Group.
+                    </p>
+
+                </div>
+
+
+                <div class="troubleshooting-item">
+
+                    <strong>05. EC2 Status</strong>
+
+                    <p>
+                        Verify that the EC2 instance is running and passing
+                        its instance status checks.
+                    </p>
+
+                </div>
+
+
+                <div class="troubleshooting-item">
+
+                    <strong>06. Application Port</strong>
+
+                    <p>
+                        Verify that the application is running and listening
+                        on the port configured in the Target Group.
+                    </p>
+
+                </div>
+
+
+                <div class="troubleshooting-item">
+
+                    <strong>07. Network Configuration</strong>
+
+                    <p>
+                        If required, inspect route tables and Network ACLs
+                        for rules that could prevent communication.
+                    </p>
+
+                </div>
+
+            </div>
 
         </section>
 
@@ -499,8 +716,8 @@
                     <h3>☁ AWS Networking</h3>
 
                     <p>
-                        Improved my understanding of VPCs, subnets,
-                        routing and connectivity.
+                        Improved my understanding of VPCs, public and private
+                        subnets, route tables, Internet Gateways and NAT Gateways.
                     </p>
 
                 </div>
@@ -508,11 +725,11 @@
 
                 <div class="info-card">
 
-                    <h3>🔐 Security</h3>
+                    <h3>🔐 Security Groups</h3>
 
                     <p>
-                        Learned why application components should not
-                        all be directly exposed to the internet.
+                        Learned how security groups can create controlled
+                        communication paths such as ALB → EC2 → RDS.
                     </p>
 
                 </div>
@@ -520,11 +737,11 @@
 
                 <div class="info-card">
 
-                    <h3>📈 Architecture</h3>
+                    <h3>⚖️ Load Balancing</h3>
 
                     <p>
-                        Understood how separating application layers
-                        improves organization and scalability.
+                        Understood how ALBs use Target Groups and health
+                        checks to route requests to healthy application targets.
                     </p>
 
                 </div>
@@ -532,11 +749,36 @@
 
                 <div class="info-card">
 
-                    <h3>🛠 Hands-on Practice</h3>
+                    <h3>📈 Auto Scaling</h3>
 
                     <p>
-                        Gained practical experience working with
-                        AWS infrastructure components.
+                        Improved my understanding of scaling policies,
+                        desired capacity, Launch Templates and EC2 replacement.
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <h3>🌎 High Availability</h3>
+
+                    <p>
+                        Learned why distributing resources across multiple
+                        Availability Zones can improve application availability
+                        and fault tolerance.
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <h3>🛠 Troubleshooting</h3>
+
+                    <p>
+                        Practiced troubleshooting AWS connectivity issues by
+                        checking the architecture layer by layer.
                     </p>
 
                 </div>
@@ -546,7 +788,7 @@
         </section>
 
 
-        <!-- FUTURE UPDATE -->
+        <!-- NEXT ITERATION -->
 
         <section class="case-section">
 
@@ -555,10 +797,11 @@
             </h2>
 
             <p>
-                I plan to rebuild this architecture from scratch to
-                strengthen my AWS networking and architecture fundamentals.
-                The updated architecture diagram, screenshots and
-                implementation notes will be added here afterward.
+                The next iteration will rebuild the architecture from scratch
+                to strengthen AWS networking and infrastructure fundamentals.
+                Actual AWS screenshots, the final architecture diagram and
+                implementation-specific configuration details will be added
+                after the deployment is completed and validated.
             </p>
 
         </section>
