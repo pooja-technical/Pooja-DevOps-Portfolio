@@ -1,0 +1,846 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Prometheus & Grafana Monitoring | Pooja Mangalya</title>
+
+    <meta name="description"
+        content="Prometheus and Grafana monitoring project by Pooja Mangalya — infrastructure monitoring and visualization.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <a href="index.html" class="logo">
+                <span>&lt;</span>PM<span>/&gt;</span>
+            </a>
+
+            <nav id="navMenu">
+                <a href="index.html#about">About</a>
+                <a href="index.html#skills">Skills</a>
+                <a href="index.html#projects">Projects</a>
+                <a href="index.html#journey">Journey</a>
+                <a href="index.html#internship">Internship</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+
+            <button class="menu-btn" id="menuBtn">☰</button>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= CASE STUDY ================= -->
+
+    <main class="case-study">
+
+        <!-- HERO -->
+
+        <section class="case-hero">
+
+            <div class="case-hero-content">
+
+                <p class="section-number">PROJECT 05 / MONITORING</p>
+
+                <h1>
+                    Prometheus & <span>Grafana Monitoring</span>
+                </h1>
+
+                <p class="case-intro">
+                    Implemented infrastructure monitoring using Prometheus
+                    and Grafana to collect, visualize and analyze system
+                    metrics from a monitored environment.
+                </p>
+
+                <div class="hero-tags">
+                    <span>Prometheus</span>
+                    <span>Grafana</span>
+                    <span>Node Exporter</span>
+                    <span>AWS EC2</span>
+                    <span>Monitoring</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= OVERVIEW ================= -->
+
+        <section class="section">
+
+            <div class="section-heading">
+
+                <p class="section-number">01 / OVERVIEW</p>
+
+                <h2>
+                    Project <span>Overview</span>
+                </h2>
+
+            </div>
+
+            <div class="about-grid">
+
+                <div class="about-text">
+
+                    <p>
+                        This project focuses on monitoring infrastructure
+                        using <strong>Prometheus</strong> for metrics
+                        collection and <strong>Grafana</strong> for
+                        visualization.
+                    </p>
+
+                    <p>
+                        A Node Exporter was used to expose system-level
+                        metrics such as CPU, memory and other host
+                        information.
+                    </p>
+
+                    <p>
+                        Prometheus collects the available metrics and
+                        Grafana provides dashboards that make the system
+                        information easier to understand.
+                    </p>
+
+                </div>
+
+
+                <div class="about-terminal">
+
+                    <div class="terminal-top">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <div class="terminal-body">
+
+                        <p>
+                            <span class="green">pooja@monitoring</span>:~$
+                            systemctl status prometheus
+                        </p>
+
+                        <p>
+                            Prometheus → Collecting Metrics
+                        </p>
+
+                        <p>
+                            Node Exporter → Host Metrics
+                        </p>
+
+                        <p>
+                            Grafana → Visualization
+                        </p>
+
+                        <p>
+                            <span class="green">pooja@monitoring</span>:~$
+                            <span class="cursor">_</span>
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= OBJECTIVE ================= -->
+
+        <section class="section">
+
+            <div class="section-heading">
+
+                <p class="section-number">02 / OBJECTIVE</p>
+
+                <h2>
+                    What I <span>Wanted to Learn</span>
+                </h2>
+
+            </div>
+
+
+            <div class="skills-grid">
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">📊</div>
+
+                    <h3>Metrics Collection</h3>
+
+                    <p>
+                        Understand how infrastructure metrics are
+                        collected from monitored systems.
+                    </p>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">🔍</div>
+
+                    <h3>Observability</h3>
+
+                    <p>
+                        Learn how monitoring helps identify resource
+                        usage and infrastructure issues.
+                    </p>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">📈</div>
+
+                    <h3>Visualization</h3>
+
+                    <p>
+                        Create dashboards to visualize system
+                        performance metrics.
+                    </p>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">🚨</div>
+
+                    <h3>Monitoring</h3>
+
+                    <p>
+                        Understand how infrastructure health can
+                        be continuously monitored.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ARCHITECTURE ================= -->
+
+        <section class="section">
+
+            <div class="section-heading">
+
+                <p class="section-number">03 / ARCHITECTURE</p>
+
+                <h2>
+                    Monitoring <span>Architecture</span>
+                </h2>
+
+                <p>
+                    Node Exporter exposes host metrics, Prometheus
+                    collects them and Grafana visualizes the data.
+                </p>
+
+            </div>
+
+
+            <div class="architecture">
+
+                <div class="architecture-node">
+
+                    <strong>EC2 / Host</strong>
+
+                    <small>
+                        Monitored System
+                    </small>
+
+                </div>
+
+
+                <div class="architecture-arrow">
+                    →
+                </div>
+
+
+                <div class="architecture-node">
+
+                    <strong>Node Exporter</strong>
+
+                    <small>
+                        Exposes Metrics
+                    </small>
+
+                </div>
+
+
+                <div class="architecture-arrow">
+                    →
+                </div>
+
+
+                <div class="architecture-node">
+
+                    <strong>Prometheus</strong>
+
+                    <small>
+                        Collects Metrics
+                    </small>
+
+                </div>
+
+
+                <div class="architecture-arrow">
+                    →
+                </div>
+
+
+                <div class="architecture-node">
+
+                    <strong>Grafana</strong>
+
+                    <small>
+                        Dashboards
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <p class="architecture-note">
+                Host → Node Exporter → Prometheus → Grafana
+            </p>
+
+        </section>
+
+
+        <!-- ================= COMPONENTS ================= -->
+
+        <section class="section">
+
+            <div class="section-heading">
+
+                <p class="section-number">04 / COMPONENTS</p>
+
+                <h2>
+                    Monitoring <span>Stack</span>
+                </h2>
+
+            </div>
+
+
+            <div class="skills-grid">
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">🖥</div>
+
+                    <h3>Node Exporter</h3>
+
+                    <p>
+                        Exposes host-level metrics that can be
+                        collected by Prometheus.
+                    </p>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">🔥</div>
+
+                    <h3>Prometheus</h3>
+
+                    <p>
+                        Collects and stores time-series metrics
+                        from configured targets.
+                    </p>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">📊</div>
+
+                    <h3>Grafana</h3>
+
+                    <p>
+                        Creates dashboards for visualizing
+                        infrastructure metrics.
+                    </p>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">☁</div>
+
+                    <h3>AWS EC2</h3>
+
+                    <p>
+                        Provides the cloud compute environment
+                        used for the monitoring setup.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= METRICS ================= -->
+
+        <section class="section">
+
+            <div class="section-heading">
+
+                <p class="section-number">05 / METRICS</p>
+
+                <h2>
+                    What I <span>Monitored</span>
+                </h2>
+
+            </div>
+
+
+            <div class="skills-grid">
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">⚙</div>
+
+                    <h3>CPU Usage</h3>
+
+                    <p>
+                        Observed CPU utilization to understand
+                        system workload.
+                    </p>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">🧠</div>
+
+                    <h3>Memory</h3>
+
+                    <p>
+                        Monitored available and used system memory.
+                    </p>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">💾</div>
+
+                    <h3>Disk</h3>
+
+                    <p>
+                        Observed disk-related system metrics and
+                        resource utilization.
+                    </p>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">🌐</div>
+
+                    <h3>Network</h3>
+
+                    <p>
+                        Monitored network-related host metrics
+                        exposed by Node Exporter.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= WORKFLOW ================= -->
+
+        <section class="section">
+
+            <div class="section-heading">
+
+                <p class="section-number">06 / WORKFLOW</p>
+
+                <h2>
+                    Monitoring <span>Workflow</span>
+                </h2>
+
+            </div>
+
+
+            <div class="journey">
+
+                <div class="journey-line"></div>
+
+
+                <div class="journey-item">
+
+                    <div class="journey-dot">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>Install Node Exporter</h3>
+
+                        <p>
+                            Configure Node Exporter on the monitored
+                            system to expose host metrics.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="journey-item">
+
+                    <div class="journey-dot">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>Configure Prometheus</h3>
+
+                        <p>
+                            Add the monitoring target to the
+                            Prometheus configuration.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="journey-item">
+
+                    <div class="journey-dot">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>Collect Metrics</h3>
+
+                        <p>
+                            Prometheus periodically scrapes metrics
+                            exposed by the configured target.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="journey-item">
+
+                    <div class="journey-dot">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>Create Grafana Dashboard</h3>
+
+                        <p>
+                            Connect Grafana to Prometheus and display
+                            infrastructure metrics using dashboards.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PORTS ================= -->
+
+        <section class="section">
+
+            <div class="section-heading">
+
+                <p class="section-number">07 / NETWORK</p>
+
+                <h2>
+                    Monitoring <span>Ports</span>
+                </h2>
+
+            </div>
+
+
+            <div class="skills-grid">
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">🔥</div>
+
+                    <h3>Prometheus</h3>
+
+                    <p>
+                        Default port: <strong>9090</strong>
+                    </p>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">🖥</div>
+
+                    <h3>Node Exporter</h3>
+
+                    <p>
+                        Default port: <strong>9100</strong>
+                    </p>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">📊</div>
+
+                    <h3>Grafana</h3>
+
+                    <p>
+                        Default port: <strong>3000</strong>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= TROUBLESHOOTING ================= -->
+
+        <section class="section">
+
+            <div class="section-heading">
+
+                <p class="section-number">08 / TROUBLESHOOTING</p>
+
+                <h2>
+                    Challenges & <span>Learning</span>
+                </h2>
+
+            </div>
+
+
+            <div class="about-text">
+
+                <p>
+                    I learned that monitoring depends on communication
+                    between the monitored host, Node Exporter,
+                    Prometheus and Grafana.
+                </p>
+
+                <p>
+                    When metrics are not visible, troubleshooting can
+                    involve checking service status, target health,
+                    configuration files, ports and network access.
+                </p>
+
+                <p>
+                    Working with dashboards helped me understand how
+                    raw infrastructure metrics can be converted into
+                    useful visual information.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= KEY LEARNINGS ================= -->
+
+        <section class="section">
+
+            <div class="section-heading">
+
+                <p class="section-number">09 / KEY LEARNINGS</p>
+
+                <h2>
+                    What I <span>Learned</span>
+                </h2>
+
+            </div>
+
+
+            <div class="skills-grid">
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">📊</div>
+
+                    <h3>Prometheus</h3>
+
+                    <p>
+                        Understood metric collection and
+                        time-series monitoring.
+                    </p>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">📈</div>
+
+                    <h3>Grafana</h3>
+
+                    <p>
+                        Learned how monitoring data can be
+                        visualized through dashboards.
+                    </p>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">🖥</div>
+
+                    <h3>Node Exporter</h3>
+
+                    <p>
+                        Learned how host-level metrics are
+                        exposed for monitoring.
+                    </p>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">🛠</div>
+
+                    <h3>Troubleshooting</h3>
+
+                    <p>
+                        Learned to investigate services, targets,
+                        ports and configuration issues.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FUTURE ================= -->
+
+        <section class="section">
+
+            <div class="section-heading">
+
+                <p class="section-number">10 / NEXT STEPS</p>
+
+                <h2>
+                    Future <span>Improvements</span>
+                </h2>
+
+            </div>
+
+
+            <div class="about-text">
+
+                <p>
+                    The monitoring setup can be extended with
+                    Alertmanager to send alerts when defined
+                    conditions are triggered.
+                </p>
+
+                <p>
+                    Additional dashboards and alerts can also be
+                    created for application-level metrics and
+                    infrastructure health.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= BACK ================= -->
+
+        <section class="section contact-section">
+
+            <div class="contact-box">
+
+                <p class="section-number">
+                    PROJECT 05
+                </p>
+
+                <h2>
+                    Back to <span>Projects</span>
+                </h2>
+
+                <p>
+                    Explore the other Cloud and DevOps projects
+                    in my portfolio.
+                </p>
+
+                <a href="index.html#projects" class="backlink">
+                    ← Back to Projects
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            &lt;/&gt; Built by Pooja Mangalya
+        </p>
+
+        <p>
+            Cloud • DevOps • Automation
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+```
