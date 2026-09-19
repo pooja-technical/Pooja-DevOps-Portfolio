@@ -1090,8 +1090,33 @@ footer {
 /* =========================
    SCROLL ANIMATION
    ========================= */
+/* =========================
+   SCROLL ANIMATION
+   Homepage sections only
+   ========================= */
 
-section {
+body.home section {
+    opacity: 0;
+    transform: translateY(30px);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+body.home section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Case-study page */
+.case-study section {
+    opacity: 1;
+    transform: none;
+}
+
+
+ /*section {
     opacity: 0;
     transform: translateY(30px);
 
@@ -1103,7 +1128,7 @@ section {
 section.visible {
     opacity: 1;
     transform: translateY(0);
-}
+}  */
 
 
 /* =========================
