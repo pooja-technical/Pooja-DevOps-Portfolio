@@ -1,0 +1,842 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jenkins CI/CD Pipeline | Pooja Mangalya</title>
+
+    <meta name="description"
+        content="Jenkins CI/CD Pipeline project by Pooja Mangalya — automation, continuous integration and deployment.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <a href="index.html" class="logo">
+                <span>&lt;</span>PM<span>/&gt;</span>
+            </a>
+
+            <nav id="navMenu">
+                <a href="index.html#about">About</a>
+                <a href="index.html#skills">Skills</a>
+                <a href="index.html#projects">Projects</a>
+                <a href="index.html#journey">Journey</a>
+                <a href="index.html#internship">Internship</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+
+            <button class="menu-btn" id="menuBtn">☰</button>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= CASE STUDY ================= -->
+
+    <main class="case-study">
+
+        <!-- HERO -->
+
+        <section class="case-hero">
+
+            <div class="case-hero-content">
+
+                <p class="section-number">PROJECT 02 / CI/CD</p>
+
+                <h1>
+                    Jenkins <span>CI/CD Pipeline</span>
+                </h1>
+
+                <p class="case-intro">
+                    Built a continuous integration and continuous delivery
+                    workflow using Jenkins to automate application build,
+                    testing and deployment.
+                </p>
+
+                <div class="hero-tags">
+                    <span>Jenkins</span>
+                    <span>Git</span>
+                    <span>CI/CD</span>
+                    <span>Linux</span>
+                    <span>Docker</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= OVERVIEW ================= -->
+
+        <section class="section">
+
+            <div class="section-heading">
+
+                <p class="section-number">01 / OVERVIEW</p>
+
+                <h2>
+                    Project <span>Overview</span>
+                </h2>
+
+            </div>
+
+            <div class="about-grid">
+
+                <div class="about-text">
+
+                    <p>
+                        This project focuses on using
+                        <strong>Jenkins</strong> to automate the
+                        software delivery process.
+                    </p>
+
+                    <p>
+                        Instead of performing each step manually,
+                        Jenkins can automatically retrieve source code,
+                        build the application, run required checks and
+                        deploy the application.
+                    </p>
+
+                    <p>
+                        The project helped me understand the role of
+                        <strong>CI/CD automation</strong> in a DevOps
+                        workflow.
+                    </p>
+
+                </div>
+
+                <div class="about-terminal">
+
+                    <div class="terminal-top">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <div class="terminal-body">
+
+                        <p>
+                            <span class="green">pooja@jenkins</span>:~$
+                            jenkins
+                        </p>
+
+                        <p>
+                            Source Code → Build → Test → Deploy
+                        </p>
+
+                        <p>
+                            <span class="green">Pipeline Status:</span>
+                            Automated
+                        </p>
+
+                        <p>
+                            <span class="green">pooja@jenkins</span>:~$
+                            <span class="cursor">_</span>
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= OBJECTIVE ================= -->
+
+        <section class="section">
+
+            <div class="section-heading">
+
+                <p class="section-number">02 / OBJECTIVE</p>
+
+                <h2>
+                    What I <span>Wanted to Learn</span>
+                </h2>
+
+            </div>
+
+            <div class="skills-grid">
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">🔄</div>
+
+                    <h3>Continuous Integration</h3>
+
+                    <p>
+                        Automatically integrate and build changes
+                        from the source code repository.
+                    </p>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">🚀</div>
+
+                    <h3>Continuous Delivery</h3>
+
+                    <p>
+                        Automate the steps required to prepare
+                        an application for deployment.
+                    </p>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">⚙</div>
+
+                    <h3>Pipeline Automation</h3>
+
+                    <p>
+                        Connect multiple development and deployment
+                        stages into one automated workflow.
+                    </p>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">🐧</div>
+
+                    <h3>Linux</h3>
+
+                    <p>
+                        Execute build and deployment commands
+                        in a Linux environment.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ARCHITECTURE ================= -->
+
+        <section class="section">
+
+            <div class="section-heading">
+
+                <p class="section-number">03 / PIPELINE</p>
+
+                <h2>
+                    CI/CD <span>Pipeline</span>
+                </h2>
+
+                <p>
+                    Jenkins coordinates the different stages of the
+                    application delivery process.
+                </p>
+
+            </div>
+
+
+            <div class="architecture">
+
+                <div class="architecture-node">
+
+                    <strong>Git</strong>
+
+                    <small>
+                        Source Code
+                    </small>
+
+                </div>
+
+
+                <div class="architecture-arrow">
+                    →
+                </div>
+
+
+                <div class="architecture-node">
+
+                    <strong>Jenkins</strong>
+
+                    <small>
+                        Automation Server
+                    </small>
+
+                </div>
+
+
+                <div class="architecture-arrow">
+                    →
+                </div>
+
+
+                <div class="architecture-node">
+
+                    <strong>Build</strong>
+
+                    <small>
+                        Compile / Package
+                    </small>
+
+                </div>
+
+
+                <div class="architecture-arrow">
+                    →
+                </div>
+
+
+                <div class="architecture-node">
+
+                    <strong>Test</strong>
+
+                    <small>
+                        Validation
+                    </small>
+
+                </div>
+
+
+                <div class="architecture-arrow">
+                    →
+                </div>
+
+
+                <div class="architecture-node">
+
+                    <strong>Deploy</strong>
+
+                    <small>
+                        Application
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <p class="architecture-note">
+
+                Git push → Jenkins → Build → Test → Deploy
+
+            </p>
+
+        </section>
+
+
+        <!-- ================= PIPELINE STAGES ================= -->
+
+        <section class="section">
+
+            <div class="section-heading">
+
+                <p class="section-number">04 / STAGES</p>
+
+                <h2>
+                    Pipeline <span>Stages</span>
+                </h2>
+
+            </div>
+
+
+            <div class="journey">
+
+                <div class="journey-line"></div>
+
+
+                <div class="journey-item">
+
+                    <div class="journey-dot">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>Source</h3>
+
+                        <p>
+                            Jenkins retrieves the latest application
+                            source code from Git.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="journey-item">
+
+                    <div class="journey-dot">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>Build</h3>
+
+                        <p>
+                            The application is compiled or packaged
+                            using the required build commands.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="journey-item">
+
+                    <div class="journey-dot">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>Test</h3>
+
+                        <p>
+                            Automated checks or tests can be executed
+                            before deployment.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="journey-item">
+
+                    <div class="journey-dot">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>Deploy</h3>
+
+                        <p>
+                            After successful validation, Jenkins
+                            performs the deployment step.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= JENKINSFILE ================= -->
+
+        <section class="section">
+
+            <div class="section-heading">
+
+                <p class="section-number">05 / PIPELINE AS CODE</p>
+
+                <h2>
+                    Jenkins <span>Pipeline</span>
+                </h2>
+
+                <p>
+                    A Jenkins pipeline can be defined as code using
+                    a Jenkinsfile stored with the application source code.
+                </p>
+
+            </div>
+
+
+            <div class="about-terminal">
+
+                <div class="terminal-top">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </div>
+
+
+                <div class="terminal-body">
+
+                    <p>
+                        <span class="green">
+                            pipeline
+                        </span>
+                        {
+                    </p>
+
+                    <p>
+                        &nbsp;&nbsp;stages {
+                    </p>
+
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;stage('Build') {
+                    </p>
+
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;steps {
+                    </p>
+
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo 'Building application'
+                    </p>
+
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+                    </p>
+
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;}
+                    </p>
+
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;stage('Test') {
+                    </p>
+
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;steps {
+                    </p>
+
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo 'Running tests'
+                    </p>
+
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+                    </p>
+
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;}
+                    </p>
+
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;stage('Deploy') {
+                    </p>
+
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;steps {
+                    </p>
+
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo 'Deploying application'
+                    </p>
+
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+                    </p>
+
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;}
+                    </p>
+
+                    <p>
+                        &nbsp;&nbsp;}
+                    </p>
+
+                    <p>
+                        }
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= TOOLS ================= -->
+
+        <section class="section">
+
+            <div class="section-heading">
+
+                <p class="section-number">06 / TOOLS</p>
+
+                <h2>
+                    Technologies <span>Used</span>
+                </h2>
+
+            </div>
+
+
+            <div class="skills-grid">
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">⚙</div>
+
+                    <h3>Jenkins</h3>
+
+                    <p>
+                        Automation server used to create and
+                        execute CI/CD pipelines.
+                    </p>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">📦</div>
+
+                    <h3>Git</h3>
+
+                    <p>
+                        Version control system used to manage
+                        and retrieve application source code.
+                    </p>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">🐧</div>
+
+                    <h3>Linux</h3>
+
+                    <p>
+                        Environment used for executing commands
+                        during build and deployment.
+                    </p>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">🐳</div>
+
+                    <h3>Docker</h3>
+
+                    <p>
+                        Can be integrated into the pipeline for
+                        container image creation and deployment.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= TROUBLESHOOTING ================= -->
+
+        <section class="section">
+
+            <div class="section-heading">
+
+                <p class="section-number">07 / TROUBLESHOOTING</p>
+
+                <h2>
+                    Challenges & <span>Learning</span>
+                </h2>
+
+            </div>
+
+
+            <div class="about-text">
+
+                <p>
+                    I learned that a CI/CD pipeline consists of multiple
+                    stages, and a failure in one stage can prevent later
+                    stages from executing.
+                </p>
+
+                <p>
+                    Troubleshooting therefore involves checking Jenkins
+                    console output, build logs, source-code configuration,
+                    credentials and environment settings.
+                </p>
+
+                <p>
+                    This helped me understand how automation tools can
+                    make application delivery more consistent and
+                    reduce repetitive manual steps.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= KEY LEARNINGS ================= -->
+
+        <section class="section">
+
+            <div class="section-heading">
+
+                <p class="section-number">08 / KEY LEARNINGS</p>
+
+                <h2>
+                    What I <span>Learned</span>
+                </h2>
+
+            </div>
+
+
+            <div class="skills-grid">
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">🔄</div>
+
+                    <h3>CI/CD</h3>
+
+                    <p>
+                        Understood how continuous integration and
+                        delivery automate software workflows.
+                    </p>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">⚙</div>
+
+                    <h3>Automation</h3>
+
+                    <p>
+                        Learned how Jenkins can connect development
+                        and deployment stages.
+                    </p>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">📋</div>
+
+                    <h3>Pipeline as Code</h3>
+
+                    <p>
+                        Learned the purpose of Jenkinsfiles for
+                        defining pipeline stages as code.
+                    </p>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">🛠</div>
+
+                    <h3>Troubleshooting</h3>
+
+                    <p>
+                        Learned to use build logs and console output
+                        to investigate pipeline failures.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FUTURE ================= -->
+
+        <section class="section">
+
+            <div class="section-heading">
+
+                <p class="section-number">09 / NEXT STEPS</p>
+
+                <h2>
+                    Future <span>Improvements</span>
+                </h2>
+
+            </div>
+
+
+            <div class="about-text">
+
+                <p>
+                    The pipeline can be extended with automated testing,
+                    Docker image creation, deployment to AWS and
+                    notifications for successful or failed builds.
+                </p>
+
+                <p>
+                    Jenkins can also be integrated with webhooks so that
+                    a source-code change can automatically trigger a
+                    pipeline execution.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= BACK ================= -->
+
+        <section class="section contact-section">
+
+            <div class="contact-box">
+
+                <p class="section-number">
+                    PROJECT 02
+                </p>
+
+                <h2>
+                    Back to <span>Projects</span>
+                </h2>
+
+                <p>
+                    Explore the other Cloud and DevOps projects
+                    in my portfolio.
+                </p>
+
+                <a href="index.html#projects" class="btn primary-btn">
+                    ← Back to Projects
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            &lt;/&gt; Built by Pooja Mangalya
+        </p>
+
+        <p>
+            Cloud • DevOps • Automation
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+```
