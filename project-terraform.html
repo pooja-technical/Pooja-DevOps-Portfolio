@@ -1,0 +1,447 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Terraform AWS Infrastructure | Pooja Mangalya</title>
+
+    <meta name="description"
+        content="Terraform AWS Infrastructure project by Pooja Mangalya — Infrastructure as Code and cloud automation.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <a href="index.html" class="logo">
+                <span>&lt;</span>PM<span>/&gt;</span>
+            </a>
+
+            <nav id="navMenu">
+                <a href="index.html#about">About</a>
+                <a href="index.html#skills">Skills</a>
+                <a href="index.html#projects">Projects</a>
+                <a href="index.html#journey">Journey</a>
+                <a href="index.html#internship">Internship</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+
+            <button class="menu-btn" id="menuBtn">☰</button>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= CASE STUDY ================= -->
+
+    <main class="case-study">
+
+        <!-- HERO -->
+
+        <section class="case-hero">
+
+            <div class="case-hero-content">
+
+                <p class="section-number">PROJECT 04 / INFRASTRUCTURE AS CODE</p>
+
+                <h1>
+                    Terraform AWS <span>Infrastructure</span>
+                </h1>
+
+                <p class="case-intro">
+                    Automated AWS infrastructure provisioning using Terraform,
+                    following Infrastructure as Code principles for repeatable
+                    and manageable cloud deployments.
+                </p>
+
+                <div class="hero-tags">
+                    <span>Terraform</span>
+                    <span>AWS</span>
+                    <span>VPC</span>
+                    <span>EC2</span>
+                    <span>IaC</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= OVERVIEW ================= -->
+
+        <section class="section">
+
+            <div class="section-heading">
+
+                <p class="section-number">01 / OVERVIEW</p>
+
+                <h2>
+                    Project <span>Overview</span>
+                </h2>
+
+            </div>
+
+            <div class="about-grid">
+
+                <div class="about-text">
+
+                    <p>
+                        This project focuses on using
+                        <strong>Terraform</strong> to define and provision
+                        AWS infrastructure through configuration files
+                        instead of creating resources manually.
+                    </p>
+
+                    <p>
+                        The infrastructure is described as code, allowing
+                        resources to be created in a repeatable and
+                        consistent way.
+                    </p>
+
+                    <p>
+                        The project helped me understand the fundamentals of
+                        <strong>Infrastructure as Code (IaC)</strong>,
+                        Terraform workflow and AWS resource management.
+                    </p>
+
+                </div>
+
+                <div class="about-terminal">
+
+                    <div class="terminal-top">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <div class="terminal-body">
+
+                        <p>
+                            <span class="green">pooja@terraform</span>:~$
+                            terraform --version
+                        </p>
+
+                        <p>
+                            Terraform<br>
+                            Infrastructure as Code<br>
+                            AWS Infrastructure
+                        </p>
+
+                        <p>
+                            <span class="green">pooja@terraform</span>:~$
+                            <span class="cursor">_</span>
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= OBJECTIVE ================= -->
+
+        <section class="section">
+
+            <div class="section-heading">
+
+                <p class="section-number">02 / OBJECTIVE</p>
+
+                <h2>
+                    What I <span>Wanted to Learn</span>
+                </h2>
+
+            </div>
+
+            <div class="skills-grid">
+
+                <div class="skill-card">
+                    <div class="skill-icon">⚙</div>
+                    <h3>Infrastructure as Code</h3>
+                    <p>
+                        Understand how infrastructure can be managed
+                        through code.
+                    </p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">☁</div>
+                    <h3>AWS Provisioning</h3>
+                    <p>
+                        Create and manage AWS resources using Terraform.
+                    </p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">🔁</div>
+                    <h3>Repeatability</h3>
+                    <p>
+                        Build infrastructure consistently instead of
+                        configuring everything manually.
+                    </p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">📋</div>
+                    <h3>Terraform Workflow</h3>
+                    <p>
+                        Learn the init, plan, apply and destroy workflow.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ARCHITECTURE ================= -->
+
+        <section class="section">
+
+            <div class="section-heading">
+
+                <p class="section-number">03 / ARCHITECTURE</p>
+
+                <h2>
+                    Infrastructure <span>Flow</span>
+                </h2>
+
+                <p>
+                    Terraform acts as the Infrastructure as Code layer
+                    between the configuration files and AWS resources.
+                </p>
+
+            </div>
+
+            <div class="architecture">
+
+                <div class="architecture-node">
+                    <strong>Terraform</strong>
+                    <small>Infrastructure as Code</small>
+                </div>
+
+                <div class="architecture-arrow">→</div>
+
+                <div class="architecture-node">
+                    <strong>AWS Provider</strong>
+                    <small>Resource Configuration</small>
+                </div>
+
+                <div class="architecture-arrow">→</div>
+
+                <div class="architecture-node">
+                    <strong>VPC</strong>
+                    <small>Network</small>
+                </div>
+
+                <div class="architecture-arrow">→</div>
+
+                <div class="architecture-node">
+                    <strong>EC2</strong>
+                    <small>Compute</small>
+                </div>
+
+            </div>
+
+            <p class="architecture-note">
+                Terraform configuration → plan → apply → AWS infrastructure
+            </p>
+
+        </section>
+
+
+        <!-- ================= RESOURCES ================= -->
+
+        <section class="section">
+
+            <div class="section-heading">
+
+                <p class="section-number">04 / RESOURCES</p>
+
+                <h2>
+                    Terraform <span>Resources</span>
+                </h2>
+
+            </div>
+
+            <div class="skills-grid">
+
+                <div class="skill-card">
+                    <div class="skill-icon">☁</div>
+                    <h3>AWS Provider</h3>
+                    <p>
+                        Connects Terraform with AWS and allows AWS
+                        resources to be managed through Terraform.
+                    </p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">🌐</div>
+                    <h3>VPC</h3>
+                    <p>
+                        Defines the virtual network in which cloud
+                        resources can be deployed.
+                    </p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">🔐</div>
+                    <h3>Security Group</h3>
+                    <p>
+                        Controls inbound and outbound traffic for
+                        resources such as EC2.
+                    </p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">💻</div>
+                    <h3>EC2</h3>
+                    <p>
+                        Provides the compute instance used as part of
+                        the infrastructure.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= WORKFLOW ================= -->
+
+        <section class="section">
+
+            <div class="section-heading">
+
+                <p class="section-number">05 / WORKFLOW</p>
+
+                <h2>
+                    Terraform <span>Workflow</span>
+                </h2>
+
+            </div>
+
+            <div class="journey">
+
+                <div class="journey-line"></div>
+
+                <div class="journey-item">
+
+                    <div class="journey-dot">01</div>
+
+                    <div>
+                        <h3>Write Configuration</h3>
+
+                        <p>
+                            Define AWS resources using Terraform
+                            configuration files.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="journey-item">
+
+                    <div class="journey-dot">02</div>
+
+                    <div>
+                        <h3>Terraform Init</h3>
+
+                        <p>
+                            Initialize the Terraform working directory
+                            and download required providers.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="journey-item">
+
+                    <div class="journey-dot">03</div>
+
+                    <div>
+                        <h3>Terraform Plan</h3>
+
+                        <p>
+                            Preview the infrastructure changes Terraform
+                            intends to make.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="journey-item">
+
+                    <div class="journey-dot">04</div>
+
+                    <div>
+                        <h3>Terraform Apply</h3>
+
+                        <p>
+                            Apply the configuration and provision the
+                            required AWS resources.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="journey-item">
+
+                    <div class="journey-dot">05</div>
+
+                    <div>
+                        <h3>Terraform Destroy</h3>
+
+                        <p>
+                            Remove the infrastructure created by
+                            Terraform when it is no longer required.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= COMMANDS ================= -->
+
+        <section class="section">
+
+            <div class="section-heading">
+
+                <p class="section-number">06 / COMMANDS</p>
+
+                <h2>
+                    Important <span>Commands</span>
+                </h2>
+
+            </div>
+
+            <div class="about-terminal">
+
+                <div class="terminal-top">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="terminal-body">
+```
